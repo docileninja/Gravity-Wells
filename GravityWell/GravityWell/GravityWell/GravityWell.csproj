@@ -85,8 +85,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Rendering.cs" />
+    <Compile Include="SaveWriter.cs" />
     <Compile Include="ScreenManager.cs" />
     <Compile Include="Simulation.cs" />
+    <Compile Include="SplashScreen.cs" />
     <Compile Include="SubGameTime.cs" />
     <Compile Include="TitleScreen.cs" />
     <Compile Include="Wall.cs" />
@@ -132,6 +134,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Load\Maps\Map3.cme">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Load\Maps\Map1.cme">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

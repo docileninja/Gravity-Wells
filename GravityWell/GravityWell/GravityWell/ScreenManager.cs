@@ -106,7 +106,7 @@ namespace GravityWell
 
         public void Initialize() 
         {
-            currentScreen = new GamePlayScreen();
+            currentScreen = new TitleScreen();
             fade = new FadeAnimation();
             inputManager = new InputManager();
         }

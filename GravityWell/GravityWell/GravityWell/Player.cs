@@ -8,12 +8,6 @@ namespace GravityWell
 		public Player()
 		{
 		}
-
-		public void updateEntity()
-		{
-
-
-		}
 	}
 }
 

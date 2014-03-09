@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Input;
 
 
 namespace GravityWell
@@ -21,8 +22,9 @@ namespace GravityWell
 		//GameTime gameTime;
 		float secondsPast;
 		float gravityFactor;
+        public bool isEnd, isGameOver;
 
-        public void LoadContent(ContentManager Content, InputManager input, string mapID)
+        public void LoadContent(ContentManager Content, string mapID)
         {
             //this.content = new ContentManager(Content.ServiceProvider, "Content");
             fileManager = new FileManager();
@@ -31,8 +33,10 @@ namespace GravityWell
             attributes = new List<List<string>>();
             contents = new List<List<string>>();
 
-            gravityFactor = 10000000f;
+            gravityFactor = 1000000f;
             iterations = 1;
+            isEnd = false;
+            isGameOver = false;
 
             fileManager.LoadContent("Load/Maps/" + mapID + ".cme", attributes, contents, "Entities");
 
@@ -46,13 +50,48 @@ namespace GravityWell
                             for (int k = 0; k < contents[i].Count; k++)
                             {
                                 string[] split = contents[i][k].Split(',');
-                                //loadTexture = content.Load<Texture2D>("BorderSets/" + split[5]);
                                 entities.Add(new Entity(split[0], split[1], new Vector2(float.Parse(split[2]), float.Parse(split[3])),
                                     new Vector2(float.Parse(split[4]), float.Parse(split[5])),
                                     new Vector2(float.Parse(split[6]), float.Parse(split[7]))));
                             }
                             break;
                         case "EndEntity":
+                            break;
+                        case "StartWall":
+                            for (int k = 0; k < contents[i].Count; k++)
+                            {
+                                string[] split = contents[i][k].Split(',');
+                                entities.Add(new Entity(split[0], split[1], new Vector2(float.Parse(split[2]), float.Parse(split[3])),
+                                    new Vector2(float.Parse(split[4]), float.Parse(split[5])),
+                                    new Vector2(float.Parse(split[6]), float.Parse(split[7])),
+                                    new Vector2(float.Parse(split[8]), float.Parse(split[9])), true));
+                            }
+                            break;
+                        case "EndWall":
+                            break;
+                        case "StartWell":
+                            for (int k = 0; k < contents[i].Count; k++)
+                            {
+                                string[] split = contents[i][k].Split(',');
+                                entities.Add(new Entity(split[0], split[1], new Vector2(float.Parse(split[2]), float.Parse(split[3])),
+                                    new Vector2(float.Parse(split[4]), float.Parse(split[5])),
+                                    new Vector2(float.Parse(split[6]), float.Parse(split[7])),
+                                    new Vector2(float.Parse(split[8]), float.Parse(split[9])), false));
+                            }
+                            break;
+                        case "EndWell":
+                            break;
+                        case "StartFinish":
+                            for (int k = 0; k < contents[i].Count; k++)
+                            {
+                                string[] split = contents[i][k].Split(',');
+                                entities.Add(new Entity(split[0], split[1], new Vector2(float.Parse(split[2]), float.Parse(split[3])),
+                                    new Vector2(float.Parse(split[4]), float.Parse(split[5])),
+                                    new Vector2(float.Parse(split[6]), float.Parse(split[7])),
+                                    new Vector2(float.Parse(split[8]), float.Parse(split[9])), false));
+                            }
+                            break;
+                        case "EndFinish":
                             break;
                     }
                 }
@@ -61,29 +100,53 @@ namespace GravityWell
 
 		public Simulation ()
 		{
-			//Console.WriteLine ("initing simulation");
-            //entities = new List<Entity>();
-            //entities.Add(new Entity("well1", "MiscSprites/marioblackhole", new Vector2(400f, 400f), Vector2.Zero, Vector2.Zero));
-            //entities.Add(new Entity("well2", "MiscSprites/marioblackhole", new Vector2(1000f, 200f), Vector2.Zero, Vector2.Zero));
-            //entities.Add(new Entity("player", "MiscSprites/Astro0", new Vector2(100f, 100f), new Vector2(250f, 0f), Vector2.Zero));
-			//entities.Add (new Entity ("well2", 38f, 45f, 0f, 0f, 0f, 0f));
-			//gravityFactor = 10000000f;
-            //iterations = 1;
 		}
 
-		public void Update(GameTime gameTime)
+        public void UnloadContent()
+        {
+            //this.content.Unload();
+        }
+
+		public void Update(GameTime gameTime, InputManager input)
 		{
-            //gameTime = new GameTime (fps, seconds);
             secondsPast = (float)gameTime.ElapsedGameTime.Milliseconds / 1000f;
-            //Console.WriteLine("Seconds {0}", secondsPast);
 
             iterations++;
-            //Console.WriteLine("");
-            //Console.WriteLine("iteration: {0}", iterations);
 
-            this.updateEntityPositions();
-            this.updateEntityVelocities();
-            this.updateEntityAccelerations();
+            if (isEnd)
+            {
+                /*
+                foreach (Entity end in entities)
+                {
+                    if (end.type == "end")
+                    {
+                        foreach (Entity player in entities)
+                        {
+                            if (player.type == "player")
+                            {
+                                player.pos = end.pos;
+                                player.vel = Vector2.Zero;
+                                player.accel = Vector2.Zero;
+                                player.rotation += 0.5f;
+                                endTime++;
+                                if (endTime > 5)
+                                {
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+                 * */
+            }
+            else
+            {
+                this.updateEntityPositions();
+                this.updateEntityVelocities();
+                this.updateEntityAccelerations(input);
+                this.testForCollisions();
+                this.testForEnd();
+            }
             //this.logEntities();
 
             //if (iterations%100 == 99)
@@ -93,9 +156,6 @@ namespace GravityWell
 		void updateEntityPositions ()
 		{
 			foreach (Entity entity in entities) {
-
-                //float xVelocity = Vector2.UnitX(entity.vel * (float)Math.Cos(entity.vel.Y);
-                //float yVelocity = entity.vel.X * (float)Math.Sin(entity.vel.UnY);
 
 				entity.pos.X += entity.vel.X * secondsPast;
 				entity.pos.Y += entity.vel.Y * secondsPast;
@@ -107,49 +167,49 @@ namespace GravityWell
 		{
 
 			foreach (Entity entity in entities) {
-                /*
-                float xVelocity = entity.vel.X * (float)Math.Cos(entity.vel.Y);
-                float yVelocity = entity.vel.X * (float)Math.Sin(entity.vel.Y);
-
-				float xAcceleration = entity.accel.X * (float)Math.Cos (entity.accel.Y);
-                float yAcceleration = entity.accel.X * (float)Math.Sin(entity.accel.Y);
-
-				float newXVelocity = xVelocity + xAcceleration;
-				float newYVelocity = yVelocity + yAcceleration;
-
-				entity.vel.X = (float)Math.Sqrt (newXVelocity * newXVelocity + newYVelocity * newYVelocity);
-                entity.vel.Y = (float)Math.Atan2(newYVelocity, newXVelocity);
-                */
-
+                
                 entity.vel.X += entity.accel.X * secondsPast;
                 entity.vel.Y += entity.accel.Y * secondsPast;
 
                 if (Vector2.Distance(entity.vel, Vector2.Zero) != 0f)
                     entity.rotation += 5 * 1/Vector2.Distance(entity.vel, Vector2.Zero);
-                //Console.WriteLine("accel * {0} = ({1}, {2})",secondsPast, entity.accel.X*secondsPast, entity.accel.Y*secondsPast);
 			}
 
 		}
 
-		void updateEntityAccelerations ()
+		void updateEntityAccelerations (InputManager input)
 		{
 
 			float netXAccel = 0f;
 			float netYAccel = 0f;
 
+            float minDistance = 100000000000f;
+
 			foreach (Entity entity in entities) {
 
-				if (entity.name == "player") {
+				if (entity.type == "player") {
 
 					foreach (Entity otherEntity  in entities) {
 
-						if (otherEntity.name != "player") {
+						if (otherEntity.type == "well") {
 
                             float distance = Vector2.Distance(entity.pos, otherEntity.pos);
                             Vector2 distanceVector = Vector2.Subtract(otherEntity.pos, entity.pos);
 							float angle = angleBetweenTwoEntities(distanceVector);
+                            float accel;
 
-                            float accel = gravityFactor / (distance * distance);
+                            if (input.KeyDown(Keys.Space))
+                            {
+                                accel = gravityFactor * 5f / (distance * distance);
+                                if (accel < 15f)
+                                {
+                                    accel = 15f;
+                                }
+                            }
+                            else
+                            {
+                                accel = gravityFactor / (distance * distance);
+                            }
 
 							float xAccel = accel * (float)(Math.Cos(angle));
 							float yAccel = accel * (float)(Math.Sin(angle));
@@ -157,11 +217,21 @@ namespace GravityWell
 							netXAccel += xAccel;
 							netYAccel += yAccel;
 
+                            if (distance < minDistance)
+                                minDistance = distance;
+
+                            
 						}
 
 					}
 
-					
+                    if (minDistance > 1200 || minDistance < 10)
+                        isGameOver = true;
+
+                    if (input.KeyDown(Keys.Up)) { netYAccel -= 5f; }
+                    if (input.KeyDown(Keys.Down)) { netYAccel += 5f; }
+                    if (input.KeyDown(Keys.Left)) { netXAccel -= 5f; }
+                    if (input.KeyDown(Keys.Right)) { netXAccel += 5f; }
 
 					entity.accel.X = netXAccel;
 					entity.accel.Y = netYAccel;
@@ -176,21 +246,77 @@ namespace GravityWell
 		}
 
 		void testForCollisions ()
-		{
-			for (int i = 0; i < entities.Count; i++) {
+        {
 
-				for (int j = 0; j < entities.Count; j++) {
+            foreach (Entity entity in entities)
+            {
 
-					if (!(i == j)) {
+                if (entity.type == "player")
+                {
 
+                    foreach (Entity wall in entities)
+                    {
 
+                        if (wall.type == "wall")
+                        {
 
-					}
+                            float distanceAlongWall = Vector2.Dot(entity.pos - wall.pos, wall.length);
+                            Vector2 scaledWall = Vector2.Normalize(wall.length);
+                            scaledWall *= distanceAlongWall;
 
-				}
+                            if (distanceAlongWall > 0 && distanceAlongWall < Vector2.Distance(wall.length, Vector2.Zero))
+                            {
+                                float distanceToWall = Vector2.Distance(entity.pos, scaledWall + wall.pos);
 
-			}
-		}
+                                if (distanceToWall < 11f)
+                                {
+                                    entity.vel = Vector2.Reflect(entity.vel, Vector2.Normalize(wall.length));
+                                }
+                            }
+
+                            
+                        }
+
+                    }
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+        void testForEnd()
+        {
+            foreach (Entity entity in entities)
+            {
+
+                if (entity.type == "player")
+                {
+
+                    foreach (Entity end in entities)
+                    {
+
+                        if (end.type == "end")
+                        {
+
+                            float distance = Vector2.Distance(entity.pos, end.pos);
+
+                            if (distance < 80)
+                            {
+                                isEnd = true;
+                            }
+                        }
+
+                    }
+
+                    break;
+
+                }
+
+            }
+        }
 
 		void logEntities ()
 		{
@@ -205,7 +331,7 @@ namespace GravityWell
 		{
 			foreach (Entity entity in entities) {
 
-				if (entity.name == "player") {
+				if (entity.type == "player") {
 					//Console.WriteLine ("{0} {1}", entity.pos.X, entity.pos.Y);
 				}
 
@@ -220,11 +346,7 @@ namespace GravityWell
 
 		float distanceBetweenTwoEntities (Entity entity1, Entity entity2) {
 
-			//float xDistance = entity1.pos.X - entity2.pos.X;
-			//float yDistance = entity1.pos.Y - entity2.pos.Y;
-
 			float distance = Vector2.Distance(entity1.pos, entity2.pos);
-			//Console.WriteLine ("distance between {0} and {1}: {2}", entity1.name, entity2.name, distance);
 
 			return distance;
 

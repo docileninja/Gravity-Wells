@@ -5,7 +5,7 @@
 
 Load=[StartWell]
 
-[well,MiscSprites/gravity_well_asset,300,300,0,0,0,0,0.5,0.5]
+[well,MiscSprites/gravity_well_asset,300,300,0,0,0,0,0.5,0.5][well,MiscSprites/gravity_well_asset,800,0,0,0,0,0,0.5,0.5]
 
 Load=[EndWell]
 [dummy]
@@ -13,14 +13,9 @@ Load=[EndWell]
 
 Load=[StartFinish]
 
-[end,MiscSprites/EndPoint1,1000,300,0,0,0,0,1,1]
+[end,MiscSprites/EndPoint1,5000,5000,0,0,0,0,1,1]
 
 Load=[EndFinish]
-[dummy]
-
-
-Load=[StartWall]
-Load=[EndWall]
 [dummy]
 
 
@@ -30,6 +25,13 @@ Load=[StartEntity]
 
 Load=[EndEntity]
 [dummy]
+
+
+Load=[StartWall]
+Load=[EndWall]
+[dummy]
+
+
 
 
 EndLoad=[Entities]

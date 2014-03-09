@@ -19,3 +19,15 @@ C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\bg1.xnb
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Load\Maps\Map1.cme
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Load\Maps\Map2.cme
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\gravity_well_asset.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\BorderTest.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\PlayGame.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\PlayGameSelected.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\Title.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\TitleBackground.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Load\Maps\Map3.cme
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\EndPoint.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\EndPoint1.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\EndPoint2.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\EndPoint3.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\Font1.xnb

@@ -1,9 +1,35 @@
 ﻿Load=[Entities]
 
+
+
+
+Load=[StartWell]
+
+[well,MiscSprites/gravity_well_asset,300,300,0,0,0,0,0.5,0.5]
+
+Load=[EndWell]
+[dummy]
+
+
+Load=[StartFinish]
+
+[end,MiscSprites/EndPoint1,1000,300,0,0,0,0,1,1]
+
+Load=[EndFinish]
+[dummy]
+
+
+Load=[StartWall]
+Load=[EndWall]
+[dummy]
+
+
 Load=[StartEntity]
 
-[well1,MiscSprites/marioblackhole,400,400,0,0,0,0][player,MiscSprites/Astro0,100,100,250,0,0,0]
+[player,MiscSprites/Astro0,100,100,70,0,0,0]
 
 Load=[EndEntity]
+[dummy]
+
 
 EndLoad=[Entities]
