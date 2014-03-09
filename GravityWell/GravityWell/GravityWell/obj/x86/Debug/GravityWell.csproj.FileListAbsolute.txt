@@ -12,3 +12,4 @@ C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.pdb
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\fade.xnb
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\null.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\standingmario.xnb

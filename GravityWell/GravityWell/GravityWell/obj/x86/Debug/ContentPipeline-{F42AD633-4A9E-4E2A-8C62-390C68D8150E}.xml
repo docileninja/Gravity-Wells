@@ -19,6 +19,15 @@
       <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\null.xnb</Output>
       <Time>2014-03-08T16:42:21.0273751-08:00</Time>
     </Item>
+    <Item>
+      <Source>MiscSprites\standingmario.png</Source>
+      <Name>MiscSprites\standingmario</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\standingmario.xnb</Output>
+      <Time>2014-03-08T18:06:29.3348577-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F42AD633-4A9E-4E2A-8C62-390C68D8150E}</ContentProjectGUID>

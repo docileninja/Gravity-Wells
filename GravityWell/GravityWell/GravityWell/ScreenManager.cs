@@ -116,8 +116,8 @@ namespace GravityWell
             content = new ContentManager(Content.ServiceProvider, "Content");
             currentScreen.LoadContent(content, inputManager);
 
-            //nullImage = this.content.Load<Texture2D>("MiscSprites/null");
-            //fadeTexture = this.content.Load<Texture2D>("MiscSprites/fade");
+            nullImage = this.content.Load<Texture2D>("MiscSprites/null");
+            fadeTexture = this.content.Load<Texture2D>("MiscSprites/fade");
             fade.LoadContent(content, fadeTexture, "", Vector2.Zero);
             fade.Scale = dimensions.X;
         }

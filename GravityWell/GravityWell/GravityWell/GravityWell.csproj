@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="FadeAnimation.cs" />
     <Compile Include="GamePlayScreen.cs" />
     <Compile Include="GameScreen.cs" />
