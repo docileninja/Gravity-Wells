@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{F42AD633-4A9E-4E2A-8C62-390C68D8150E}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWellContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-10-29T23:37:22.7286911-07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
