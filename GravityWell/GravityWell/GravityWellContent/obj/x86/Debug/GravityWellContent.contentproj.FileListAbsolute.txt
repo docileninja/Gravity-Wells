@@ -1,1 +1,2 @@
 C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWellContent\obj\x86\Debug\GravityWellContent.contentprojResolveAssemblyReference.cache
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWellContent\obj\x86\Debug\GravityWellContent.contentprojResolveAssemblyReference.cache

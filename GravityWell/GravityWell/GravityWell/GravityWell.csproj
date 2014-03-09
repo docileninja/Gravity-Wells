@@ -72,6 +72,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="FadeAnimation.cs" />
     <Compile Include="GamePlayScreen.cs" />
     <Compile Include="GameScreen.cs" />
     <Compile Include="InputManager.cs" />

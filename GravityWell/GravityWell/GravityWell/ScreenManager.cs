@@ -40,7 +40,7 @@ namespace GravityWell
 
         bool transition;
 
-        //FadeAnimation fade = new FadeAnimation();
+        FadeAnimation fade = new FadeAnimation();
         
         Texture2D fadeTexture, nullImage;
                 
@@ -83,11 +83,9 @@ namespace GravityWell
         {
             transition = true;
             newScreen = screen;
-            /*
             fade.IsActive = true;
             fade.Alpha = 0.0f;
             fade.ActivateValue = 1.0f;
-             * */
             this.inputManager = inputManager;
         }
 
@@ -95,7 +93,6 @@ namespace GravityWell
         {
             transition = true;
             newScreen = screen;
-            /*
             fade.IsActive = true;
             fade.ActivateValue = 1.0f;
             if (alpha != 1.0f)
@@ -104,16 +101,13 @@ namespace GravityWell
                 fade.Alpha = alpha;
 
             fade.Increase = true;
-             * */
             this.inputManager = inputManager;
         }
 
         public void Initialize() 
         {
             currentScreen = new GamePlayScreen();
-            /*
             fade = new FadeAnimation();
-             * */
             inputManager = new InputManager();
         }
 
@@ -122,12 +116,10 @@ namespace GravityWell
             content = new ContentManager(Content.ServiceProvider, "Content");
             currentScreen.LoadContent(content, inputManager);
 
-            nullImage = this.content.Load<Texture2D>("null");
-            fadeTexture = this.content.Load<Texture2D>("fade");
-            /*
+            //nullImage = this.content.Load<Texture2D>("MiscSprites/null");
+            //fadeTexture = this.content.Load<Texture2D>("MiscSprites/fade");
             fade.LoadContent(content, fadeTexture, "", Vector2.Zero);
             fade.Scale = dimensions.X;
-             * */
         }
         public void Update(GameTime gameTime)
         {
@@ -139,10 +131,8 @@ namespace GravityWell
         public void Draw(SpriteBatch spriteBatch)
         {
             currentScreen.Draw(spriteBatch);
-            /*
             if (transition)
                 fade.Draw(spriteBatch);
-             * */
         }
 
         #endregion
@@ -151,11 +141,7 @@ namespace GravityWell
 
         private void Transition(GameTime gameTime)
         {
-            screenStack.Push(newScreen);
-            currentScreen.UnloadContent();
-            currentScreen = newScreen;
-            currentScreen.LoadContent(content, inputManager);
-            /*
+            
             fade.Update(gameTime);
             if (fade.Alpha == 1.0f && fade.Timer.TotalSeconds == 1.0f)
             {
@@ -169,7 +155,6 @@ namespace GravityWell
                 transition = false;
                 fade.IsActive = false;
             }
-             * */
         }
 
         #endregion

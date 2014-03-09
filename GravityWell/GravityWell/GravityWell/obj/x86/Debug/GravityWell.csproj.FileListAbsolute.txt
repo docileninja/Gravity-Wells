@@ -4,3 +4,11 @@ C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\Gr
 C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\bin\x86\Debug\GravityWell.pdb
 C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.exe
 C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.pdb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\GravityWell.exe
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\GravityWell.pdb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.csprojResolveAssemblyReference.cache
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.exe
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\GravityWell.pdb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\fade.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\null.xnb

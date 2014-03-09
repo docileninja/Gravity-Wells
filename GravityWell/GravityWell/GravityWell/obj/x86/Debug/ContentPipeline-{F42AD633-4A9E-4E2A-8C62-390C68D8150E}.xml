@@ -1,6 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>MiscSprites\fade.png</Source>
+      <Name>MiscSprites\fade</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\fade.xnb</Output>
+      <Time>2014-03-08T16:42:21.0253717-08:00</Time>
+    </Item>
+    <Item>
+      <Source>MiscSprites\null.png</Source>
+      <Name>MiscSprites\null</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\null.xnb</Output>
+      <Time>2014-03-08T16:42:21.0273751-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F42AD633-4A9E-4E2A-8C62-390C68D8150E}</ContentProjectGUID>
@@ -8,12 +26,36 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWellContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Carson\Documents\Visual Studio 2010\Projects\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWellContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-07:00</Value>
+      </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2013-10-29T23:37:22.7286911-07:00</Value>
