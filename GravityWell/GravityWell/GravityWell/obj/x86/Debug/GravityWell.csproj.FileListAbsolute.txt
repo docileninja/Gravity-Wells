@@ -13,3 +13,9 @@ C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\obj\x
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\fade.xnb
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\null.xnb
 C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\standingmario.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\marioblackhole.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\tempAstronaut.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\Astro0.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\bg1.xnb
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Load\Maps\Map1.cme
+C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Load\Maps\Map2.cme

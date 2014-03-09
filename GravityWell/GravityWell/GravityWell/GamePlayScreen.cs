@@ -11,12 +11,23 @@ namespace GravityWell
 {
     class GamePlayScreen : GameScreen
     {
+        Rendering renderer;
+        Simulation simulation;
         //Player player;
         //Map map;
         Entity entity;
+        int mapNum;
+        ContentManager content;
 
-        public override void LoadContent(ContentManager content, InputManager input)
+        public override void LoadContent(ContentManager Content, InputManager input)
         {
+            this.content = new ContentManager(Content.ServiceProvider, "Content");
+            mapNum = 2;
+            String mapID = "Map" + mapNum.ToString();
+            simulation = new Simulation();
+            simulation.LoadContent(content, input, mapID);
+            renderer = new Rendering();
+            renderer.LoadContent(content);
             entity = new Entity();
             base.LoadContent(content, input);
             entity.LoadContent(content);
@@ -30,6 +41,7 @@ namespace GravityWell
         {
             base.UnloadContent();
             entity.UnloadContent();
+            renderer.UnloadContent();
             //player.UnloadContent();
             //map.UnloadContent();
         }
@@ -38,6 +50,8 @@ namespace GravityWell
         {
             inputManager.Update();
             entity.Update(gameTime);
+            simulation.Update(gameTime);
+            
             //player.Update(gameTime, inputManager, map.collision, map.layer);
             //map.Update(gameTime);
         }
@@ -46,6 +60,9 @@ namespace GravityWell
         {
             base.Draw(spriteBatch);
             entity.Draw(spriteBatch);
+            renderer.Draw(simulation.entities, spriteBatch);
+            
+            //
             //map.Draw(spriteBatch);
             //player.Draw(spriteBatch);
         }

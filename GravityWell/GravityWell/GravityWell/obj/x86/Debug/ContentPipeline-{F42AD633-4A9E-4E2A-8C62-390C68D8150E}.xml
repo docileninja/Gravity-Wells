@@ -28,6 +28,42 @@
       <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\standingmario.xnb</Output>
       <Time>2014-03-08T18:06:29.3348577-08:00</Time>
     </Item>
+    <Item>
+      <Source>MiscSprites\marioblackhole.png</Source>
+      <Name>MiscSprites\marioblackhole</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\marioblackhole.xnb</Output>
+      <Time>2014-03-09T01:33:23.4111161-08:00</Time>
+    </Item>
+    <Item>
+      <Source>MiscSprites\tempAstronaut.png</Source>
+      <Name>MiscSprites\tempAstronaut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\tempAstronaut.xnb</Output>
+      <Time>2014-03-09T01:42:30.4534147-08:00</Time>
+    </Item>
+    <Item>
+      <Source>MiscSprites\Astro0.png</Source>
+      <Name>MiscSprites\Astro0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\Astro0.xnb</Output>
+      <Time>2014-03-09T03:28:19.6113801-07:00</Time>
+    </Item>
+    <Item>
+      <Source>MiscSprites\bg1.png</Source>
+      <Name>MiscSprites\bg1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Carson\Documents\GitHub\Wells\GravityWell\GravityWell\GravityWell\bin\x86\Debug\Content\MiscSprites\bg1.xnb</Output>
+      <Time>2014-03-09T03:34:41.1553219-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F42AD633-4A9E-4E2A-8C62-390C68D8150E}</ContentProjectGUID>

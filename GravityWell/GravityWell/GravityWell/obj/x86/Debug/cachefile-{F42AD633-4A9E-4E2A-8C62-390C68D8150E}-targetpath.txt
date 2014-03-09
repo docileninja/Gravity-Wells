@@ -1,3 +1,7 @@
 Content\MiscSprites\fade.xnb
 Content\MiscSprites\null.xnb
 Content\MiscSprites\standingmario.xnb
+Content\MiscSprites\marioblackhole.xnb
+Content\MiscSprites\tempAstronaut.xnb
+Content\MiscSprites\Astro0.xnb
+Content\MiscSprites\bg1.xnb

@@ -1,0 +1,9 @@
+﻿Load=[Entities]
+
+Load=[StartEntity]
+
+[well1,MiscSprites/marioblackhole,400,400,0,0,0,0][player,MiscSprites/Astro0,100,100,250,0,0,0]
+
+Load=[EndEntity]
+
+EndLoad=[Entities]
